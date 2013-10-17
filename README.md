@@ -1,11 +1,12 @@
 **isup** is a Python 3 script that uses [isup.me][isupme] to check if a website is up or down, based on [this Python 2 script][gistisup].
 
-This is `isup` version 1.1.0 ([semver][]). The versioned API includes the usage pattern, as found in the docstring of [`isup.py`](isup.py), as well as the meanings of the statuses, described in the *Statuses* section below.
+This is `isup` version 1.1.1 ([semver][]). The versioned API includes the usage pattern, as found in the docstring of [`isup.py`](isup.py), as well as the meanings of the statuses, described in the *Statuses* section below.
 
 Requirements
 ============
 
-To run `isup`, you will need [docopt][].
+*   [docopt][]
+*   [fancyio][]
 
 Changes
 =======
@@ -13,7 +14,7 @@ Changes
 The following things have been changed:
 
 *   The script has been updated to Python 3.
-*   When checking multiple websites at once, the script now prints the result for each website before checking the next one.
+*   Multiple websites are now checked concurrently.
 *   The script now prints the status in a fancy output box before the domain name. The meanings of the statuses are described below.
 
 Statuses
@@ -25,6 +26,7 @@ Statuses
 *   `[ ?! ]` An error occured while checking the website, for example [isup.me][isupme] could not be reached.
 
 [docopt]: http://docopt.org/ (docopt)
+[fancyio]: https://github.com/fenhl/fancyio
 [gistisup]: https://gist.github.com/andrix/1423960#file-isup-py (gist:andrix/isup.py)
 [isupme]: http://isup.me/ (isup.me)
 [semver]: http://semver.org/ (Semantic Versioning 2.0.0)
