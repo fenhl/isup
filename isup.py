@@ -11,7 +11,7 @@ Options:
   -h, --help  
 """
 
-__version__ = '1.1.1'
+__version__ = '1.1.2'
 
 from docopt import docopt
 import fancyio
@@ -31,7 +31,7 @@ class IsupThread(threading.Thread):
             self.progress = 0.8
             if type(request) != type(''):
                 request = request.decode('utf-8')
-            if "It's just you" in request:
+            if "t's just you" in request:
                 self.state = ' UP '
             else:
                 self.state = 'DOWN'
